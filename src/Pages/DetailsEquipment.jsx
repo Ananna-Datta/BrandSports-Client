@@ -13,7 +13,7 @@ const DetailsEquipment = () => {
     const fetchEquipment = async () => {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:5000/equipment/${id}`);
+        const response = await fetch(`https://brand-sports.vercel.app/${id}`);
         if (!response.ok) {
           throw new Error('Failed to fetch equipment details');
         }
@@ -34,7 +34,7 @@ const DetailsEquipment = () => {
     const confirmDelete = window.confirm("Are you sure you want to delete this equipment?");
     if (confirmDelete) {
       try {
-        await fetch(`http://localhost:5000/equipment/${id}`, {
+        await fetch(`https://brand-sports.vercel.app/equipment/${id}`, {
           method: 'DELETE',
         });
         alert("Equipment deleted successfully.");

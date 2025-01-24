@@ -36,7 +36,7 @@ const AddEquipment = () => {
     console.log(newEquipment);
 
     // API submission logic
-    fetch("http://localhost:5000/equipment", {
+    fetch("https://brand-sports.vercel.app/equipment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -102,7 +102,6 @@ const AuthProvider = ({ children }) => {
     logoutUser,
     setLoading,
     setUser,
-    logoutUser
   };
 
   return (

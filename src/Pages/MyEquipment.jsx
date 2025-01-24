@@ -10,7 +10,7 @@ const MyEquipment = () => {
     useEffect(() => {
         // Fetch equipment only if the user and their email are available
         if (!loading && user?.email) {
-            fetch(`http://localhost:5000/equipment?email=${user.email}`)
+            fetch(`https://brand-sports.vercel.app/equipment?email=${user.email}`)
                 .then((res) => res.json())
                 .then((data) => setequip(data))
                 .catch((err) => console.error("Error fetching equipment:", err));
@@ -28,7 +28,7 @@ const MyEquipment = () => {
             confirmButtonText: "Yes, delete it!",
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/equipment/${_id}`, {
+                fetch(`https://brand-sports.vercel.app/equipment/${_id}`, {
                     method: "DELETE",
                 })
                     .then((res) => res.json())

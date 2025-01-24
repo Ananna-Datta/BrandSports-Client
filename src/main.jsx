@@ -29,13 +29,13 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('http://localhost:5000/equipment'),
+        loader: () => fetch('https://brand-sports.vercel.app/equipment'),
       },
       {
         path: "/all",
         element: 
         <AllEquipments></AllEquipments>,
-        loader: () => fetch('http://localhost:5000/equipment')
+        loader: () => fetch('https://brand-sports.vercel.app/equipment')
       },
       {
         path: "/add",
@@ -53,7 +53,7 @@ const router = createBrowserRouter([
           </PrivateRoutes>
         ),
         
-        loader: ({ params }) => fetch(`http://localhost:5000/equipment/${params.id}`)
+        loader: ({ params }) => fetch(`https://brand-sports.vercel.app/equipment/${params.id}`)
       },
       {
         path: "/myequip",
@@ -71,7 +71,7 @@ const router = createBrowserRouter([
             <UpdateEquipment></UpdateEquipment>,
           </PrivateRoutes>
         ),
-        loader: ({ params }) => fetch(`http://localhost:5000/equipment/${params.id}`),
+        loader: ({ params }) => fetch(`https://brand-sports.vercel.app/equipment/${params.id}`),
       },
       {
         path: "/login",
